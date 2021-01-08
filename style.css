@@ -1,4 +1,4 @@
-
+/*colors*/
 :root{
 --Very-Dark-Magenta: hsl(300, 43%, 22%);
 --Soft-Pink: hsl(333, 80%, 67%);
@@ -17,12 +17,13 @@
 
 body{
     font-size: 15px;
-    font-family: 'Spartan', sans-serif;
+    font-family: 'Spartan', sans-serif;+
      
 }
 
 main{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh; 
@@ -139,7 +140,7 @@ main{
     width: 100%;
 }
 
-.content-box{
+.box{
     width: 380px;
     height: 200px;
     background-color: var(--Very-Dark-Magenta);
@@ -210,19 +211,25 @@ h3{
 /*MOBILE DESING*/
 
 
-@media (max-width:768px){
+@media (max-width:425px){
 
     .main-content{
+        width: 100vw;
         margin: 0 10px 0 10px;
-        height: 100vh;
-    }
-    .row-one{
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;  
+        flex-wrap: wrap; 
+        justify-content: center;
+        align-items: center; 
     }
 
-
+    .row-one,.row-two{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
     .left-box{
         display: flex;
         justify-content: center;
