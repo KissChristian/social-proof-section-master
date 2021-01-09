@@ -36,11 +36,6 @@ span{
 body{
     font-size: 15px;
     font-family: 'Spartan', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-     
 }
 
 main{
@@ -55,7 +50,7 @@ main{
 /*ROW-ONE-CONTETNT*/
 
 .row-one{
-    height: 50%;
+
     display: flex;
     flex-direction:row;
     align-items: center;
@@ -145,8 +140,8 @@ main{
 .row-two{
     display: flex;
     flex-direction:row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    height: 50%;
 }
 
 .box{
@@ -212,78 +207,55 @@ h3{
     width: 90%;
 }
 
-/*MOBILE DESING*/
-
-
 @media (max-width:425px){
+
+
     main{
         max-width: 100vw;
-        height: 100vh;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        margin: 0;
+        flex-wrap: wrap; 
+        justify-content: center;
+        align-items: center; 
+
     }
-
-    .tittle{
-        font-size: 1.875rem;
-    }
-
-
-
-    .row-one , .row-two{
-       display: flex;
-       flex-wrap: wrap;
-       flex-direction: row;
-       justify-content: center;
-       align-items: center;
-    }
-
     .row-one{
-        width:100%;
-        height: 50vh;
-        margin:80px 20px 150px 20px ;
-    }
-
-    .left-box , .right-box{
         width: 100%;
-        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     }
-
-    .left-box_content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+.left-box{
+     width: 100vw;
     }
+
+.left-box_content{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.right-box{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
     .tittle{
         text-align: center;
         width: 70%;
         max-height:25%;
+        font-size: 1.875rem;
     }
     .left-box-text{
         max-height:25%;
-        padding: 6%;
+        padding:0 10%;
+        margin-bottom: 6%;
         text-align: center;
     }
-
-    .rated-box {
-        width: 100%;
-        height: 5rem;
-        margin: 0.625rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0.625rem;
-    }
-
-    .stars{
-        padding-bottom:0.9375rem;
-    }
+ 
     .rateds {
         width:100%;
         height:100%;
@@ -291,16 +263,33 @@ h3{
         flex-direction: column;
         padding: 0;
     }
+    .rated-box {
+        width: 100%;
+        height: 5rem;
+        margin: 10px 0 ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.625rem;
+    }
+    .stars{
+        padding-bottom:0.9375rem;
+    }
+    .row-two{
+        width: 100vw;
+        padding-bottom: 30px;
+    }
     .rated-one,.rated-two,.rated-three{
         display: flex;
         justify-content: center;
     }
     .box {
         width:100%;
-        padding: 0 1.25rem;
-        margin-top:0.625rem;
+        height: 290px;
+        padding: 0 1.5rem;
+        margin-top:1rem;
     }
-
     .box_text{
         padding:0;
     }
