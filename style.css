@@ -10,39 +10,55 @@
 --White: hsl(0, 0%, 100%);
 }
 
+
+.rated-box{
+    background-color:var(--Light-Grayish-Magenta);
+    color:var(--Very-Dark-Magenta);}
+
+.box{
+    background-color: var(--Very-Dark-Magenta);
+    color:var(--White);
+}
+span{
+    color:var(--Soft-Pink)
+}
+
+.left-box-text{
+    color:var(--Dark-Grayish-Magenta); 
+}
 *{
     margin:0;
     padding:0;
 }
 
+
+/*DEFAULT*/
 body{
     font-size: 15px;
-    font-family: 'Spartan', sans-serif;+
-     
-}
-
-main{
+    font-family: 'Spartan', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
+     
 }
 
-
-.main-content{
-    width: 1440px;
-    
-    
+main{
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh; 
+    margin: 30px;
 }
- 
 /*ROW-ONE-CONTETNT*/
 
 .row-one{
+    height: 50%;
     display: flex;
-    flex-direction: row;
-    margin-bottom: 50px;
- 
+    flex-direction:row;
+    align-items: center;
 }
 
 
@@ -60,10 +76,7 @@ main{
 }
 
 
-.left-box  p{
-    color:var(--Dark-Grayish-Magenta);
-    width:90%;   
-}
+
 
 .left-box_content{
     display: flex;
@@ -96,9 +109,6 @@ main{
 }
 
 .rated-box{
-    background-color:var(--Light-Grayish-Magenta);
-    color:var(--Very-Dark-Magenta);
-   
     font-weight: 700;
     height: 50px;
     margin:10px;
@@ -121,6 +131,7 @@ main{
 .rated-two{
     display: flex;
     justify-content: center;
+    
 }
 
 .rated-three{
@@ -134,29 +145,21 @@ main{
 .row-two{
     display: flex;
     flex-direction:row;
-    flex-wrap: wrap;
     justify-content: space-between;
-    height: 300px;
-    width: 100%;
+    height: 50%;
 }
 
 .box{
-    width: 380px;
-    height: 200px;
-    background-color: var(--Very-Dark-Magenta);
-    padding: 30px;
-    border-radius: 10px; 
+    width: 390px;
+    height: 330px;
+    padding-left: 0;
+    border-radius: 10px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; 
-    color:var(--White);
-    
-
+    flex-wrap: wrap
 }
 
-span{
-    color:var(--Soft-Pink)
-}
+
 
 h3{
     font-weight: normal;
@@ -186,10 +189,9 @@ h3{
 }
 
 .box_text{
-    display: flex;
-    
-    align-self: center;
+    height: 100px;
     line-height: 25px;
+    padding-right: 58px;
 }
 
 .box-one{
@@ -206,96 +208,100 @@ h3{
     
 }
 
-
+.row-one,.row-two{
+    width: 90%;
+}
 
 /*MOBILE DESING*/
 
 
 @media (max-width:425px){
-
-    .main-content{
-        width: 100vw;
-        margin: 0 10px 0 10px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap; 
-        justify-content: center;
-        align-items: center; 
-    }
-
-    .row-one,.row-two{
+    main{
+        max-width: 100vw;
+        height: 100vh;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .tittle{
+        font-size: 1.875rem;
+    }
+
+
+
+    .row-one , .row-two{
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .row-one{
+        width:100%;
+        height: 50vh;
+        margin:80px 20px 150px 20px ;
+    }
+
+    .left-box , .right-box{
+        width: 100%;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
-    .left-box{
-        display: flex;
-        justify-content: center;
+
+    .left-box_content {
         width: 100%;
-        
-    }
-
-    .left-box_content{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        padding: 20px 40px 0 40px;
-        
-    }
-
-    
-
-
-    .right-box{
-        width: 100%;
-        display: flex;
-
-         
-    }
-
-    .rateds{
-        padding: 0;
-        width: 100%;
-    }
-
-    .rated-one, .rated-two,.rated-three{
-        display: flex;
-        justify-content: center;
-        margin:0;
-    }
-
-    .rated-box{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+    }
+    .tittle{
+        text-align: center;
+        width: 70%;
+        max-height:25%;
+    }
+    .left-box-text{
+        max-height:25%;
+        padding: 6%;
+        text-align: center;
+    }
+
+    .rated-box {
         width: 100%;
-        height: 80px;
-        line-height: 25px;
-
+        height: 5rem;
+        margin: 0.625rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.625rem;
     }
 
-   
-
-    .tittle {
-        font-size: 1.5rem;
-        padding-bottom: 20px;
+    .stars{
+        padding-bottom:0.9375rem;
     }
-    
-   
-    .row-two{
+    .rateds {
+        width:100%;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .rated-one,.rated-two,.rated-three{
+        display: flex;
         justify-content: center;
     }
+    .box {
+        width:100%;
+        padding: 0 1.25rem;
+        margin-top:0.625rem;
+    }
 
-        .box{
-        padding-bottom:20px
-     }
-        .content-box{
-        width:290px;
-        
-     
- }
-
+    .box_text{
+        padding:0;
+    }
 }
