@@ -37,22 +37,17 @@
         font-size: 15px;
         font-family: 'Spartan', sans-serif;
     }
-    
-    @media (max-width:1440px){
-    
-    main{
-        max-width: 1440px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 85vh; 
-        margin: 30px;
+
+    .main{
+        display:flex;
+        flex-flow:row wrap;
+        justify-content:center;
     }
-    /*ROW-ONE-CONTETNT*/
+
+
+    /*ROW-ONE*/
     
     .row-one{
-    
         display: flex;
         flex-direction:row;
         align-items: center;
@@ -145,15 +140,21 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
+
+    .box-items{
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
     
     .box{
-        width: 390px;
-        height: 330px;
-        padding-left: 0;
+        width: 410px;
+        height: 300px;
         border-radius: 10px;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
     
@@ -165,7 +166,8 @@
     .content{
         display: flex;
         align-items: center;
-        width: 100%;
+        margin-bottom:25px;
+
     }
     
     .content-profile-image{
@@ -181,14 +183,12 @@
     .content-text{
         width:150px;
         height: 40px;
-        padding-left: 15px;
         line-height: 20px;
+        margin-left: 20px;
     }
     
     .box_text{
-        height: 100px;
         line-height: 25px;
-        padding-right: 58px;
     }
     
     .box-one{
@@ -208,26 +208,25 @@
     .row-one,.row-two{
         width: 90%;
     }
-    }
     
     @media (max-width:1024px){
     
     
-        main{
-            max-width: 100vw;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap; 
-            justify-content: center;
-            align-items: center; 
-    
-        }
-        .row-one{
+        .main {
             width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .row-one{   
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
+            
         }
     .left-box{
          width: 100vw;
@@ -279,10 +278,7 @@
         .stars{
             padding-bottom:0.9375rem;
         }
-        .row-two{
-            width: 100vw;
-            padding-bottom: 30px;
-        }
+
         .rated-one,.rated-two,.rated-three{
             display: flex;
             justify-content: center;
@@ -290,10 +286,23 @@
         .box {
             width:100%;
             height: 290px;
-            padding: 0 1.5rem;
             margin-top:1rem;
         }
         .box_text{
-            padding:0;
+            padding:0 15px;
         }
+    }
+
+
+    @media (min-width:1440px){
+        body{
+            height:100vh;
+        }
+
+        .main{
+            width:1440px;
+            height:100vh;
+            justify-content:center;
+        }
+        
     }
