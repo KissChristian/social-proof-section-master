@@ -214,12 +214,12 @@
     
         .main {
             width: 100%;
-            height: 100vh;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
+            margin:150px 0;
         }
         .row-one{   
             flex-direction: row;
@@ -297,12 +297,22 @@
     @media (min-width:1440px){
         body{
             height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .main{
             width:1440px;
-            height:100vh;
-            justify-content:center;
+
+        }
+
+
+        .row-one{
+            margin-bottom: 80px;
+        }
+        .row-two{
+            height: 350px;
         }
         
     }
